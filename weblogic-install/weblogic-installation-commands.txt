@@ -1,0 +1,8 @@
+# WLS
+$JAVA_HOME/bin/java -Xmx1024m -jar /u01/software/fmw_12.2.x.x.x_wls.jar -silent -responseFile /u01/software/wls.rsp -invPtrLoc /u01/software/oraInst.loc
+
+# Infrastructure
+$JAVA_HOME/bin/java -Xmx1024m -jar /u01/software/fmw_12.2.x.x.x_infrastructure.jar -silent -responseFile /u01/software/fmw_infr.rsp -invPtrLoc /u01/software/oraInst.loc
+
+# Complete with examples
+$JAVA_HOME/bin/java -Xmx1024m -jar /u01/software/fmw_12.2.x.x.x_infrastructure.jar -silent -responseFile /u01/software/wls-complete.rsp -invPtrLoc /u01/software/oraInst.loc
