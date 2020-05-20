@@ -1,0 +1,12 @@
+# Set environment.
+export MW_HOME=/u01/app/oracle/middleware
+export WLS_HOME=$MW_HOME/wlserver
+export WL_HOME=$WLS_HOME
+export JAVA_HOME=/u01/app/oracle/jdk1.8.xxx
+export PATH=$JAVA_HOME/bin:$PATH
+export CONFIG_JVM_ARGS=-Djava.security.egd=file:/dev/./urandom
+
+. $WLS_HOME/server/bin/setWLSEnv.sh
+
+# Command to Create the domain.
+java weblogic.WLST create_domain.py -p myDomain.properties
